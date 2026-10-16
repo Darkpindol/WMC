@@ -43,10 +43,13 @@ p {
 
 .recipe-image {
     display: block;
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    border-radius: 10px;
+    width: min(100%, 540px);
+    height: auto;
+    max-height: 360px;
+    margin: 0 auto 1.5rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 0.75rem 1.8rem rgba(38, 52, 47, 0.16);
 }
 
 table {
