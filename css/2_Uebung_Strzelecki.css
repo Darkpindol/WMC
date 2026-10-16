@@ -83,25 +83,3 @@ li {
     background-color: #eaf1eb;
     border-radius: 8px;
 }
-
-strong, b {
-    color: #244a3a;
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    th, td {
-        padding: 6px;
-    }
-}
