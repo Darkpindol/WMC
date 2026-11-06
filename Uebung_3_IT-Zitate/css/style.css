@@ -1,0 +1,202 @@
+:root {
+  color-scheme: light;
+  --page-bg: #000;
+  --coral: #ff624b;
+  --salmon: #ff826f;
+  --light-blue: #add7e2;
+  --pale-blue: #addfea;
+  --grid: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1px 0;
+  background: var(--page-bg);
+  color: #111;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.panel {
+  width: 90%;
+  margin: 25px auto;
+  border-radius: 5px;
+}
+
+.banner,
+.footer {
+  background: var(--coral);
+  color: var(--pale-blue);
+  text-align: center;
+}
+
+.banner {
+  min-height: 196px;
+  display: grid;
+  place-items: center;
+}
+
+.banner h1 {
+  margin: 0 0 24px;
+  font-family: "Mali", "Trebuchet MS", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.banner p {
+  margin: 0;
+  font-family: "Mali", "Trebuchet MS", sans-serif;
+  font-size: 25px;
+}
+
+.smile {
+  display: inline-block;
+  margin-left: 5px;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.quote-panel {
+  padding: 34px 16px;
+  background: var(--salmon);
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 70%;
+  max-width: 650px;
+  min-width: 360px;
+  margin: 0 auto;
+  border: 2px solid var(--grid);
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #fff;
+  font-size: 14px;
+}
+
+.photo-column {
+  width: 27%;
+}
+
+.first-name-column,
+.last-name-column {
+  width: 16%;
+}
+
+.quote-column {
+  width: 41%;
+}
+
+th,
+td {
+  border: 2px solid var(--grid);
+  padding: 10px 8px;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+}
+
+thead th {
+  height: 50px;
+  background: var(--light-blue);
+  text-align: center;
+  font-weight: 500;
+}
+
+tbody tr:nth-child(odd) {
+  background: #ddd;
+}
+
+.portrait {
+  padding: 8px;
+  text-align: center;
+}
+
+.portrait img {
+  display: block;
+  width: 84px;
+  height: 84px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.footer {
+  position: relative;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 150px;
+  font-family: "Mali", "Trebuchet MS", sans-serif;
+}
+
+.footer-text p {
+  margin: 0;
+}
+
+.copyright {
+  font-size: 24px;
+}
+
+.student {
+  margin-top: 4px !important;
+  font-size: 16px;
+}
+
+.school-logo {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  width: 120px;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .banner h1 {
+    font-size: 34px;
+  }
+
+  .banner p,
+  .copyright {
+    font-size: 22px;
+  }
+
+  .quote-panel {
+    padding: 24px 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  .footer {
+    min-height: 150px;
+    padding: 14px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .school-logo {
+    position: static;
+    width: 100px;
+  }
+}
