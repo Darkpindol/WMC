@@ -1,11 +1,9 @@
 :root {
-  color-scheme: light;
-  --page-bg: #000;
+  --black: #000;
   --coral: #ff624b;
   --salmon: #ff826f;
   --light-blue: #add7e2;
   --pale-blue: #addfea;
-  --grid: #000;
 }
 
 * {
@@ -15,13 +13,14 @@
 body {
   margin: 0;
   padding: 1px 0;
-  background: var(--page-bg);
+  background: var(--black);
   color: #111;
   font-family: "Roboto", Arial, sans-serif;
 }
 
 .panel {
   width: 90%;
+  max-width: 720px;
   margin: 25px auto;
   border-radius: 5px;
 }
@@ -31,49 +30,51 @@ body {
   background: var(--coral);
   color: var(--pale-blue);
   text-align: center;
+  font-family: "Mali", "Trebuchet MS", sans-serif;
 }
 
 .banner {
   min-height: 196px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner h1 {
   margin: 0 0 24px;
-  font-family: "Mali", "Trebuchet MS", sans-serif;
   font-size: 38px;
   font-weight: 600;
 }
 
-.banner p {
+.banner p,
+.footer-text p {
   margin: 0;
-  font-family: "Mali", "Trebuchet MS", sans-serif;
+}
+
+.banner p {
   font-size: 25px;
 }
 
-.smile {
-  display: inline-block;
-  margin-left: 5px;
-  font-family: "Roboto", Arial, sans-serif;
-}
-
 .quote-panel {
-  padding: 34px 16px;
+  padding: 34px 0;
   background: var(--salmon);
 }
 
 .table-wrap {
-  width: 100%;
   overflow-x: auto;
 }
 
+table,
+th,
+td {
+  border: 2px solid var(--black);
+}
+
 table {
-  width: 70%;
-  max-width: 650px;
+  width: 67%;
   min-width: 360px;
   margin: 0 auto;
-  border: 2px solid var(--grid);
   border-collapse: collapse;
   table-layout: fixed;
   background: #fff;
@@ -95,7 +96,6 @@ table {
 
 th,
 td {
-  border: 2px solid var(--grid);
   padding: 10px 8px;
   vertical-align: middle;
   overflow-wrap: break-word;
@@ -134,19 +134,14 @@ tbody tr:nth-child(odd) {
   align-items: center;
   justify-content: center;
   padding: 16px 150px;
-  font-family: "Mali", "Trebuchet MS", sans-serif;
-}
-
-.footer-text p {
-  margin: 0;
 }
 
 .copyright {
   font-size: 24px;
 }
 
-.student {
-  margin-top: 4px !important;
+.footer-text .student {
+  margin-top: 4px;
   font-size: 16px;
 }
 
@@ -155,7 +150,6 @@ tbody tr:nth-child(odd) {
   right: 18px;
   bottom: 16px;
   width: 120px;
-  height: auto;
 }
 
 .visually-hidden {
@@ -181,7 +175,7 @@ tbody tr:nth-child(odd) {
   }
 
   .quote-panel {
-    padding: 24px 10px;
+    padding: 24px 0;
   }
 
   table {
