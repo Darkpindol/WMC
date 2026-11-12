@@ -37,7 +37,6 @@ body {
 }
 
 .featured-card {
-  
   flex: 2 1 250px;
   max-width: 360px;
   background-color: #007bff;
